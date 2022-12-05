@@ -1,0 +1,36 @@
+
+<div class="container">
+    <div class="row align-items-md-stretch">
+<div class="col-md-12">
+<div class="h-100 p-4 text-white bg-dark rounded-3 text-center">
+    <h3>DA DE ALTA A UN ALUMNO</h3>
+</div>
+</div>
+<form [formGroup]="usersForm" (ngSubmit)="onSubmit()" noValidate>
+    <div class="mb-3">
+        <label class="form-label">nombre</label>
+        <input formControlName="nombre" type="text" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">apellido</label>
+        <input formControlName="apellido" type="text" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">direccion</label>
+        <input formControlName="direccion" type="text" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">discapacidad</label>
+        <input formControlName="discapacidad" type="text" class="form-control" required>
+    </div><div class="mb-3">
+        <label class="form-label">edad</label>
+        <input formControlName="edad" type="number" class="form-control" required>
+    </div>
+    <button [disabled]="!usersForm.valid" type="submit" class="btn btn-primary" >Guardar</button>
+</form>
+
+</div>
+</div>
+

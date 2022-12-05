@@ -1,0 +1,32 @@
+
+
+        <nav class="navbar navbar-expand-lg bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="login">UNIVERSIDAD TECNOLÓGICA DE AGUASCALIENTES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+                <a class="nav-link" routerLink="careers" routerLinkActive="active">Carreras</a>
+                <a *ngIf="userSign == 'Admin'" class="nav-link" routerLink="private" routerLinkActive="active">Docentes</a>
+                <a class="nav-link" routerLink="tasks" routerLinkActive="active">Nosotros</a>
+                <a *ngIf="userSign == 'Admin'" class="nav-link" routerLink="show" routerLinkActive="active">Talleres</a>
+                <a *ngIf="userSign == 'Admin'" class="nav-link" routerLink="showUsers" routerLinkActive="active">Alumnos</a>
+
+
+                <ul class="navbar-nav ml-auto">  </ul>
+                <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+                  <li><a routerLink="/login" routerLinkActive="active" >Ingresar a mi sesión</a></li>
+                </ng-container>
+                <ng-template #loggedIn>
+                  <li><a class="nav-link" style="cursor:pointer" (click)="authService.logout()">Cerrar sesión</a></li>
+                <span class="navbar-text">
+                  PREGUNTA POR NUESTRO PLAN DE ESTUDIOS E INSCRIBETE
+                </span>
+              </ng-template>
+              </div>
+            </div>
+          </div>
+        </nav>

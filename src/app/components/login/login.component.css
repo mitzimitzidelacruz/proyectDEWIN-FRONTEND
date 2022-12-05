@@ -1,0 +1,90 @@
+
+
+
+
+.login-page{
+    height: 100vh;
+    width: 100%;
+    background: url(../../../assets/img/utags.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.login-spacer{
+    height: 20vh;
+}
+
+.login-container{
+    margin: auto;
+    width: 300px;
+    padding: 2vh;
+    background-color: #37567ccc;
+    border-radius: 5%;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+#login-fab {
+	border-radius: 50%;
+    height: 56px;
+    margin: auto;
+    min-width: 56px;
+    width: 56px;
+    overflow: hidden;
+
+    margin-top: -35px;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+#lock-icon{
+    line-height: 56px;
+   
+}
+.card-heading{
+    text-align: center;
+    color:#D2DAFF;
+}
+
+.buttons .login{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    
+}
+.buttons .register > button{
+    border: 2px solid rgb(43, 131, 47);
+    border-radius: 12px;
+}
+.buttons .login > button{
+    width: 100%;
+    border: 2px solid rgb(43, 131, 47);
+        border-radius: 12px;
+    
+}
+
+.buttons .register{
+    display: flex;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    justify-content: space-between;
+    
+}
+.login-card-logo {
+    margin-bottom: 2rem;
+}
+
+.login-card-logo img {
+    width: 60px;
+}
+
+.login-card-logo,
+.login-card-header,
+.login-card-footer {
+    text-align: center;
+}
+

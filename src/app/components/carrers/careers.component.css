@@ -1,0 +1,25 @@
+.card{
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.card:hover{
+    border: solid rgb(195, 195, 255) 2px;
+
+}
+.card:hover img{
+    transform: rotate(0);
+   
+}
+.description{
+    text-align: center;
+    padding: 5px 25px;
+    color: rgb(100, 101, 102);
+    font-size: 25px;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+    color:rgb(31, 36, 41);
+}
