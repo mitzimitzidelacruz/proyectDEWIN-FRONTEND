@@ -17,12 +17,13 @@ import { AuthGuard } from './auth.guard';
 import { ShowUsersComponent } from './components/show-users/show-users.component';
 import { CreateUsersComponent } from './components/create-users/create-users.component';
 import { EditUsersComponent } from './components/edit-users/edit-users.component';
+import { AppGuardGuard } from './guards/app-guard.guard';
 const routes: Routes = [
 
 {path: '', redirectTo: '/login',
 pathMatch: 'full'},
 //ruta que necesita validacion
-{path: 'private', component:PrivateTasksComponent, canActivate: [AuthGuard]},
+{path: 'private', component:PrivateTasksComponent, canActivate: [AuthGuard],},
 {path: 'tasks', component: TasksComponent},
 {path: 'login', component: LoginComponent},
 {path: 'register', component: RegisterComponent},
